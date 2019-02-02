@@ -69,7 +69,7 @@
         <ul class="catalog-navigation__breadcrumbs breadcrumbs">
           <li>
             <a href="#">
-              <img src="img/icon-home.svg" alt="Главная страница">  <!-- SVG -->
+              <img src="img/icon-home.svg" alt="Переход на главную страницу">
             </a>
           </li>
           <li>
@@ -89,10 +89,78 @@
       <section class="page-main__filter filter">
         <h2>Фильтр:</h2>
 
-        <form class="filter__form" action="GET">  <!-- Доделать форму -->
-          <fieldset>
+        <form class="form" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="form__price">
             <legend>Цена:</legend>
+
+            <div class="form__range-controls">
+              <div class="form__scale">
+                <div class="form__bar"></div>
+              </div>
+              <button type="button" class="form__toggle form__toggle--min" aria-label="Минимальная цена"></button>
+              <button type="button" class="form__toggle form__toggle--max" aria-label="Максимальная цена"></button>
+            </div>
+
+            <div class="form__price-output">
+              <label for="min-price" class="visually-hidden">От</label>
+              <input id="min-price" type="text" value="0">
+              <span class="form__dash">&mdash;</span>
+              <label for="max-price" class="visually-hidden">До</label>
+              <input id="max-price" type="text" value="30000">
+            </div>
           </fieldset>
+
+          <fieldset class="form__manufacturers">
+            <legend>Производители:</legend>
+
+            <ul class="form__manufacturers-list">
+              <li>
+                <input type="checkbox" name="bosh" id="filter-bosh">
+                <label for="filter-bosh">
+                  Bosh
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="interskol" id="filter-interskol">
+                <label for="filter-interskol">
+                  Интерскол
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="makita" id="filter-makita">
+                <label for="filter-makita">
+                  Makita
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="dewalt" id="filter-dewalt">
+                <label for="filter-dewalt">
+                  Dewalt
+                </label>
+              </li>
+              <li>
+                <input type="checkbox" name="hitachi" id="filter-hitachi">
+                <label for="filter-hitachi">
+                  Hitachi
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form__supply">
+            <ul class="form__supply-list">
+              <li>
+                <input type="radio" name="supply-type" id="filter-accumulator" value="accumulator">
+                <label for="filter-accumulator">Аккумуляторные</label>
+              </li>
+              <li>
+                <input type="radio" name="supply-type" id="filter-network" value="network">
+                <label for="filter-network">Сетевые</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <button type="submit">Показать</button>
         </form>
       </section>
 
