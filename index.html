@@ -10,7 +10,12 @@
         <a class="page-header__logo logo">
           Техномарт
         </a>
-        <input class="page-header__search" type="search" placeholder="Поиск:">
+
+        <form class="page-header__form form-search" action="#" method="get">
+          <label class="visually-hidden" for="search-field">Поиск по сайту</label>
+          <input type="search" id="search-field" placeholder="Поиск:">
+        </form>
+
         <a href="#" class="page-header__bookmarks">Закладки: 0</a>
         <a href="#" class="page-header__cart">Корзина: 0</a>
         <a href="#" class="page-header__checkout">Оформить заказ</a>
@@ -32,7 +37,7 @@
         <nav class="page-header__main-nav main-nav">
           <ul class="main-nav__list nav-list">
             <li>
-              <a class="nav-list__link" href="#">Главная</a>
+              <a class="nav-list__link">Главная</a>
             </li>
             <li>
               <a class="nav-list__link" href="#">Компания</a>
@@ -353,5 +358,32 @@
         </div>
       </section>
     </footer>
+
+    <section class="modal modal--callback">
+      <h2 class="visually-hidden">Форма обратной связи</h2>
+      <form class="form-callback" action="https://echo.htmlacademy.ru" method="post">
+        <fieldset>
+          <legend class="visually-hidden">Данные для обращения</legend>
+          <div class="form-callback__user-info">
+            <label for="user-name">Ваше имя:</label>
+            <input type="text" id="user-name" placeholder="Имя Фамилия">
+          </div>
+
+          <div class="form-callback__user-email">
+            <label for="user-email">Ваш e-mail:</label>
+            <input type="email" id="user-email" placeholder="email@example.com">
+          </div>
+
+          <div class="form-callback__text-message">
+            <label for="user-message">Текст письма:</label>
+            <textarea id="user-message" cols="30" rows="10" placeholder="В свободной форме"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form-callback__submit">
+          <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </section>
   </body>
 </html>
